@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Yaser</title>
+    <link rel="shortcut icon" href="img/YaserLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="#inicio" onclick="unaPagina('inicio', document.getElementById('linkInicio'))"><img src="img/YaserLogo.png" alt="Logo Yaser" /></a>
+        </div>
+        <div class="contenedorMenu">
+            <a id="iconMenu" href="javascript:void(0);" onclick="menuResponsivo()"><span class="material-symbols-outlined">menu</span></a>
+            <nav class="menu" id="miMenu">
+                <ul>
+                    <li><a href="#inicio" id="linkInicio" class="linkPagina active" onclick="unaPagina('inicio', this)"><span class="material-symbols-outlined">house</span> Inicio</a></li>
+                    <li><a href="#proyectos" class="linkPagina" onclick="unaPagina('proyectos', this)"><span class="material-symbols-outlined">library_books</span> Proyectos</a></li>
+                    <li><a href="#contacto" class="linkPagina" onclick="unaPagina('contacto', this)"><span class="material-symbols-outlined">perm_phone_msg</span> Contacto</a></li>
+                    <li><a href="#habilidades" class="linkPagina" onclick="unaPagina('habilidades', this)"><span class="material-symbols-outlined">badge</span>Habilidades</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="inicio" class="contenidoPagina">
+            <div id="QuienSoy">
+                <h1>Yaser Rojas Molina</h1>
+                <div id="textoAnimado">
+                    <span id="texto-animado"></span><span id="cursor"></span>
+                </div>
+                <p id="textoPresentacion">Soy estudiante de la facultad de Ingeniería de Sistemas en la Universidad Nacional del Centro del Perú. Mi objetivo es superarme en todos los aspectos de mi vida, brindando lo mejor de mí cada día, tanto en el aspecto laboral como en el aspecto personal.</p>
+                <button class="btnDescargarCv" onclick="descargarCV()"><span class="material-symbols-outlined">download</span> Descargar CV</button>
+            </div>
+            <div class="formacionAcademica">
+                <h2><span class="material-symbols-outlined">school</span> Formación Académica</h2>
+                <div class="contenedorInstitucion">
+                    <div class="logoInstitucion">
+                        <img src="img/LogoUNCP.png" alt="Logo Uncp">
+                    </div>
+                    <div class="datosInstitucion">
+                        <div class="datosGeneralesInstitucion">
+                            <div class="inicialesInstitucion">
+                                <h3><a href="https://uncp.edu.pe/" target="_blank">UNCP</a></h3>
+                                <P>Ingeniería de sistemas</P>
+                            </div>
+                            <div class="anioAcademico">
+                                <p>2021 - Actualidad</p>
+                            </div>
+                        </div>
+                        <div class="estadoInstitucion">
+                            <p>Actualmente llevo cursando el noveno semestre en las escuela profesional de Ingeniería de sistemas, Facultad de Ingeniería de Sistemas Comprometido con mi crecimiento personal y profesional<p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="proyectos" class="contenidoPagina">
+            <div class="actividadesDesarrolloWeb">
+                <h2><span class="material-symbols-outlined">menu_book</span> Actividades del Curso Desarrollo Web 2025-I</h2>
+                <div class="contenedorFlexible">
+                    <div class="tarjeta">
+                        <h3>Semana 02</h3>
+                        <img src="img/imagenActividades.jpg" alt="imagen">
+                        <p class="temaTarjeta">Emmet Teoria</p>
+                        <p>En esta semana se revisó teoria de Emmet y su aplicación en Visual Estudio Code</p>
+                        <a href="https://github.com/Yaser-code/Semana02-EmmetTeoria-DesarrolloWeb" target="_blank">Vealo aquí</a>
+                    </div>
+                    <div class="tarjeta">
+                        <h3>Semana 03</h3>
+                        <img src="img/imagenActividades.jpg" alt="imagen">
+                        <p class="temaTarjeta">Enmet en visual studio code</p>
+                        <p>En esta semana se Desarrollo practicas con Emmet, ejercicios propuestos</p>
+                        <a href="https://github.com/Yaser-code/PracticaSemana03-DesarrolloWeb" target="_blank">Vealo aquí</a>
+                    </div>
+                    <div class="tarjeta">
+                        <h3>Semana 05</h3>
+                        <img src="img/imagenActividades.jpg" alt="imagen">
+                        <p class="temaTarjeta">Practica html y css</p>
+                        <p>En esta semana se desarrollo practica de html y css, replicar diseño</p>
+                        <a href="https://github.com/MorrisJesus/PRACTICA-HTML-Y-CSS" target="_blank">Vealo aquí</a>
+                    </div>
+                    <div class="tarjeta">
+                        <h3>Semana 06</h3>
+                        <img src="img/imagenActividades.jpg" alt="imagen">
+                        <p class="temaTarjeta">Practica javascript</p>
+                        <p>Se desarrollo practica de javascript, asignación de numeros aleatorios a celdas de tabla</p>
+                        <a href="https://github.com/Yaser-code/PRACTICA_SEMANA06" target="_blank">Vealo aquí</a>
+                    </div>
+                    <div class="tarjeta">
+                        <h3>Semana 07</h3>
+                        <img src="img/imagenActividades.jpg" alt="imagen">
+                        <p class="temaTarjeta">Practica html, css y javascript</p>
+                        <p>Se desarrollo una ruleta y una aplicación de sorteo</p>
+                        <a href="https://github.com/LeninBL/GRUPO-YASER-HOSPINA-BOZA" target="_blank">Vealo aquí</a>
+                    </div>
+                </div>
+            </div>
+            <div class="proyectosPersonales">
+                <h2><span class="material-symbols-outlined">auto_stories</span> Proyectos Personales</h2>
+                <button type="button" class="desplegable" onclick="funcionDesplegable(this)">Proyectos Personales Yaser-code</button>
+                <div class="contenidoDesplegable">
+                    <p>Mis proyectos personales</p>
+                    <div class="contenedorFlexible">
+                        <div class="tarjeta">
+                            <h3>javascript  <i class="fa-brands fa-js"></i></h3>
+                            <img src="img/factorySoftware.webp" alt="imagen">
+                            <p class="temaTarjeta">Calculadora con javascript</p>
+                            <p>En este programa se uso html, css, javascript</p>
+                            <a href="https://github.com/Yaser-code/Calculadora-en-JavaScript" target="_blank">Vealo aquí</a>
+                        </div>
+                        <div class="tarjeta">
+                            <h3>Java  <i class="fa-brands fa-java"></i></h3>
+                            <img src="img/factorySoftware.webp" alt="imagen">
+                            <p class="temaTarjeta">Calculadora con Java</p>
+                            <p>En este programa se uso intefaz grafica</p>
+                            <a href="https://github.com/Yaser-code/CalculadoraEnJava" target="_blank">Vealo aquí</a>
+                        </div>
+                        <div class="tarjeta">
+                            <h3>Python  <i class="fa-brands fa-python"></i></i></h3>
+                            <img src="img/factorySoftware.webp" alt="imagen">
+                            <p class="temaTarjeta">Registro de contactos</p>
+                            <p>En este programa se uso python con interfaces gráficas</p>
+                            <a href="https://github.com/Yaser-code/RegistroContactos" target="_blank">Vealo aquí</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="proyectos"></div>
+        </section>
+        <section id="contacto" class="contenidoPagina">
+            <h2><span class="material-symbols-outlined">support_agent</span> Contactame conmigo</h2>
+            <div class="contenedorFormulario">
+                <form action="" id="formulario">
+                    <label for="nombres">Ingrese su nombre <span class="requiereFormulario">*</span></label>
+                    <input type="text" name="nombres" placeholder="Nombres" required>
+                    <label for="email">Ingrese su correo electrónico <span class="requiereFormulario">*</span></label>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <label for="telefono">Ingrese su número de teléfono <span class="requiereFormulario">*</span></label>
+                    <input type="number" name="telefono" placeholder="Telefono" required>
+                    <label for="mensaje">Ingrese su mensaje <span class="requiereFormulario">*</span></label>
+                    <textarea name="mensaje" id="" placeholder="Ingrese su mensaje aquí..." ></textarea>
+                    <input type="submit" value="Enviar Mensaje">
+                </form>
+            </div>
+        </section>
+        <section id="habilidades" class="contenidoPagina">
+            <h2><span class="material-symbols-outlined">account_box</span> Mis habilidades</h2>
+            <div class="habilidadesContenedor">
+                <div class="cartaHabilidades">
+                    <div class="habilidadesLogo">
+                        <img src="/img/html.png" alt="">
+                    </div>
+                    <div class="contenidoHabilidades">
+                        <span class="tituloCarta">HTML</span>
+                        <p class="DescripcionCarta">Lenguaje de marcado que se utiliza para crear y estructurar el contenido de las páginas web</p>
+                    </div>
+                </div>
+                <div class="cartaHabilidades">
+                    <div class="habilidadesLogo">
+                        <img src="/img/css-3.png" alt="">
+                    </div>
+                    <div class="contenidoHabilidades">
+                        <span class="tituloCarta">CSS</span>
+                        <p class="DescripcionCarta">Lenguaje que se utiliza para definir y controlar la presentación visual de documentos escritos en HTML</p>
+                    </div>
+                </div>
+                <div class="cartaHabilidades">
+                    <div class="habilidadesLogo">
+                        <img src="/img/js-icon.png" alt="">
+                    </div>
+                    <div class="contenidoHabilidades">
+                        <span class="tituloCarta">JavaScript</span>
+                        <p class="DescripcionCarta">Lenguaje de programación</p>
+                    </div>
+                </div>
+                <div class="cartaHabilidades">
+                    <div class="habilidadesLogo">
+                        <img src="/img/java-logo.png" alt="">
+                    </div>
+                    <div class="contenidoHabilidades">
+                        <span class="tituloCarta">Java</span>
+                        <p class="DescripcionCarta">Lenguaje de programación</p>
+                    </div>
+                </div>
+                <div class="cartaHabilidades">
+                    <div class="habilidadesLogo">
+                        <img src="/img/Git_icon.png" alt="">
+                    </div>
+                    <div class="contenidoHabilidades">
+                        <span class="tituloCarta">Git</span>
+                        <p class="DescripcionCarta">Sistema de control de versiones para gestionar cambios en código</p>
+                    </div>
+                </div>
+                <div class="cartaHabilidades">
+                    <div class="habilidadesLogo">
+                        <img src="/img/github-logo.png" alt="">
+                    </div>
+                    <div class="contenidoHabilidades">
+                        <span class="tituloCarta">github</span>
+                        <p class="DescripcionCarta">Plataforma en la nube para alojar repositorios Git y colaborar</p>
+                    </div>
+                </div>
+                <div class="cartaHabilidades">
+                    <div class="habilidadesLogo">
+                        <img src="/img/mysql-icon.png" alt="">
+                    </div>
+                    <div class="contenidoHabilidades">
+                        <span class="tituloCarta">Mysql</span>
+                        <p class="DescripcionCarta">Sistema de gestión de bases de datos relacional de código abierto para almacenar y administrar datos</p>
+                    </div>
+                </div>
+                <div class="cartaHabilidades">
+                    <div class="habilidadesLogo">
+                        <img src="/img/excel-logo.png" alt="">
+                    </div>
+                    <div class="contenidoHabilidades">
+                        <span class="tituloCarta">Hojas de Excel</span>
+                        <p class="DescripcionCarta">Hojas de excel de office</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="copiaFooter">
+            <p>©2025, Yaser Rojas Molina</p>
+        </div>
+        <div class="contactameFooter">
+            <div>
+                <p>Contactame</p>
+            </div>
+            <div class="logosFooterContatos">
+                <a href="https://github.com/Yaser-code"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/yaser-rojas-molina-8540a6269?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://api.whatsapp.com/send/?phone=51962733310&text&type=phone_number&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
