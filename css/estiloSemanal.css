@@ -1,0 +1,72 @@
+body{
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+}
+.semana{
+    background-color: #000000;
+    color: #fff;
+    padding: 10px;
+    margin-top: 0;
+    text-align: center;
+    font-size: 30px;
+}
+.contedor-tom{
+    background: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+    .tema-semanal{
+        display: flex;
+        flex-direction: column;
+        box-shadow: 2px 2px 8px #ccc, 0 0 10px #000;
+        border-radius: 30px;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    .contenedor-om{
+        padding: 10px;
+        border-radius: 30px;
+    }
+        .contenedor-objetivos, .materiales-semanales {
+            box-shadow: 0 0 10px #212121;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+.contenedor-aprendizaje{
+    background-color: #fff;
+    margin-top: 0;
+    padding: 15px;
+}
+    .queAprendi{
+        text-align: center;
+        background: #212121;
+        color: #fff;
+        padding: 15px;
+        margin-bottom: 0;
+    }
+    .subtemas{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+        border: 1px solid #000;
+        margin-top: 0;
+    }
+        .contenedor-subtema{
+            box-shadow: 0 0 10px #ccc;
+            width: 40%;
+            min-width: 200px;
+            padding: 10px;
+            flex-grow: 1;
+        }
+.contenedor-practicas{
+    background-color: #f6f6f6;
+    color: #000;
+}
