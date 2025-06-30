@@ -38,7 +38,7 @@ body{
     .tema-semanal:hover{
         height: 305px;
         width: 405px;
-        transform: rotatey(360deg);
+        transform: rotate(360deg);
         transition: 2s;
     }
     .contenedor-om{
@@ -98,13 +98,21 @@ body{
 
 /*DISEÑO DE CONTENEDOR PRACTICA*/
 .contenedor-practicas{
-    background-color: #f6f6f6;
+    background-color: #dee4e6;
     color: #000;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 8px 15px #000;
+    margin: 30px 15px;
+    padding: 30px 15px;
 }
+    .contenedor-practicas h4{
+        font-size: 24px;
+        font-weight: bold;
+        border-bottom: 1px solid #000;
+    }
     .practicas{
         display: flex;
         gap: 10px;
@@ -114,6 +122,8 @@ body{
         justify-content: center;
         align-items: center;
         background: #f0f0f0;
+        border-radius: 30px;
+        margin: 10px;
     }
     .carta-practica {
         position: relative;
