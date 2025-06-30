@@ -1,15 +1,404 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semana 02</title>
+    <link rel="stylesheet" href="../css/estiloSemanal.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="shortcut icon" href="../img/YaserLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
+
 <body>
-    <h3 class="semana">SEMANA 01</h3>
-    
+    <h3 class="semana">SEMANA 02</h3>
+    <div class="contedor-tom">
+        <div class="tema-semanal">
+            <h3>Tema semanal: Construir una página con Lenguaje Marcado de Hipertexto HTML y Lenguaje
+                Marcado Extensible XML </h3>
+            <ul>
+                <li>Visual Studio Code: Emmet</li>
+                <li>Lenguaje Marcado de Hipertexto HTML</li>
+                <li>Hojas de Estilos CSS</li>
+            </ul>
+        </div>
+        <div class="contenedor-om">
+            <div class="contenedor-objetivos">
+                <h3>Objetivos</h3>
+                <ul>
+                    <li>Explicar el uso de Emmet.</li>
+                    <li>Explicar el uso de HTML.</li>
+                    <li>Ecplicar el uso de CSS</li>
+                </ul>
+            </div>
+            <div class="materiales-semanales">
+                <h3>Materiales Utilizados</h3>
+                <ul>
+                    <li>Visual Studio Code</li>
+                    <li>Internet</li>
+                    <li>Laptop</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-aprendizaje">
+        <h3 class="queAprendi">¿Qué aprendí?</h3>
+        <div class="subtemas">
+            <div class="contenedor-subtema">
+                <h4>Uso de Emmet</h4>
+                <hr>
+                <p>Plugin o herramienta de productividad que permite escribir código HTML y CSS de manera mucho más
+                    rápida mediante el uso de abreviaciones que se expanden automáticamente a estructuras completas de
+                    código.</p>
+                <h4><span class="material-symbols-outlined">
+                        lightbulb_2
+                    </span> ¿Dónde lo Uso? - Editores donde puedo utilizarlo:</h4>
+                <ul>
+                    <li>Visual Studio Code</li>
+                    <li>Sublime Text</li>
+                    <li>WebStorm, entre otros</li>
+                </ul>
+                <h4><span class="material-symbols-outlined">
+                        bookmark_check
+                    </span> Principales operadores</h4>
+                <table class="miTabla">
+                    <thead>
+                        <tr>
+                            <th>Operador</th>
+                            <th>Significado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>></td>
+                            <td>Hijo (Dentro de...)</td>
+                        </tr>
+                        <tr>
+                            <td>+</td>
+                            <td>Hermano (Al lado de...)</td>
+                        </tr>
+                        <tr>
+                            <td>^</td>
+                            <td>Salir de la etiqueta actual</td>
+                        </tr>
+                        <tr>
+                            <td>*</td>
+                            <td>Multiplicador (Repite x veces)</td>
+                        </tr>
+                        <tr>
+                            <td>()</td>
+                            <td>Agrupador</td>
+                        </tr>
+                        <tr>
+                            <td>.</td>
+                            <td>Clase</td>
+                        </tr>
+                        <tr>
+                            <td>#</td>
+                            <td>ID</td>
+                        </tr>
+                        <tr>
+                            <td>[attr]</td>
+                            <td>Atributos</td>
+                        </tr>
+                        <tr>
+                            <td>$</td>
+                            <td>Número de iteración</td>
+                        </tr>
+                        <tr>
+                            <td>{}</td>
+                            <td>Añadir texto</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="contenedor-subtema">
+                <h4>Uso de HTML</h4>
+                <hr>
+                <p>HTML (HyperText Markup Language) es el lenguaje de marcado estándar para crear páginas web.</p>
+                <p>HTML le dice al navegador qué debe mostrar en una página. Usa etiquetas (tags) para definir
+                    diferentes elementos</p>
+                <h4><span class="material-symbols-outlined">
+                        check
+                    </span> Estructura básica: </h4>
+                <p style="margin-left: 30px;">&lt;nombre_de_etiqueta&gt; Contenido &lt;/nombre_de_etiqueta&gt;</p>
+                <p style="border:1px solid #000000; margin-left: 30px">
+                    &lt;!DOCTYPE html&gt;<br>
+                    &lt;html&gt;<br>
+                    &lt;head&gt;<br>
+                    &lt;meta charset="UTF-8"&gt;<br>
+                    &lt;title&gt;Título de la página&lt;/title&gt;<br>
+                    &lt;/head&gt;<br>
+                    &lt;body&gt;<br>
+                    &lt;h1&gt;Hola, mundo&lt;/h1&gt;<br>
+                    &lt;p&gt;Este es un párrafo.&lt;/p&gt;<br>
+                    &lt;/body&gt;<br>
+                    &lt;/html&gt;<br>
+                </p>
+                <h4>Etiquetas principales:</h4>
+                <ul>
+                    <li>&lt;!DOCTYPE html&gt; : Indica la versión del documento HTML (HTML5).</li>
+                    <li>&lt;html&gt; : Inicio del documento HTML.</li>
+                    <li>&lt;head&gt; : Sección de configuración (título, estilos, metadatos, etc.).</li>
+                    <li>&lt;body&gt; : Es donde va el contenido visible.</li>
+                </ul>
+                <h4> Elementos Básicos del encabezado: </h4>
+                <ul>
+                    <li>&lt;meta charset="UTF-8"&gt; : Define el conjunto de caracteres para soportar tildes, ñ, etc.
+                    </li>
+                    <li>&lt;title&gt; : Define el título que aparece en la pestaña del navegador.</li>
+                </ul>
+                <h4><span class="material-symbols-outlined">
+                        ballot
+                    </span> Etiquetas Básicas: </h4>
+                <table class="miTabla">
+                    <thead>
+                        <tr>
+                            <th>Etiquetas</th>
+                            <th>Elementos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Encabezados</td>
+                            <td>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>Párrafos</td>
+                            <td>&lt;p&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>Imágenes</td>
+                            <td>&lt;img&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>Enlaces</td>
+                            <td>&lt;a&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>Listas</td>
+                            <td>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>Tablas</td>
+                            <td>&lt;table&gt;, &lt;thead&gt;, &lt;tbody&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>Formularios</td>
+                            <td>&lt;form&gt;, &lt;input&gt;, &lt;button&gt;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="contenedor-subtema">
+                <h4>Uso de CSS</h4>
+                <hr>
+                <p>CSS significa Cascading Style Sheets (Hojas de Estilo en Cascada).</p>
+                <p>Es un lenguaje de diseño que se utiliza para dar estilo a las páginas web creadas con HTML.</p>
+                <h4><span class="material-symbols-outlined">
+                        check
+                    </span> ¿Que puede hacer? </h4>
+                <ul>
+                    <li>Cambiar colores, fuentes y tamaños</li>
+                    <li>Posicionar elementos en la página</li>
+                    <li>Agregar márgenes y bordes</li>
+                    <li>Hacer que tu web se vea bien en celulares y computadoras (diseño responsivo)</li>
+                    <li>Agregar efectos como animaciones o transiciones</li>
+                </ul>
+                <h4>Formas de uso: </h4>
+                <table class="miTabla">
+                    <thead>
+                        <tr>
+                            <th>Ubicación</th>
+                            <th>Código</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>En linea (Dentro de una etiqueta de html)</td>
+                            <td>&lt;h1 style=&quot;color: red;&quot;&gt;Hola&lt;/h1&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>Interno (dentro de &lt;style&gt; en el &lt;head&gt;)</td>
+                            <td>&lt;head&gt;<br>&lt;style&gt;<br>p {color: green;}<br>&lt;/style&gt;<br>&lt;/head&gt;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Externo (en un archivo .css separado)</td>
+                            <td>&lt;head&gt;<br>&lt;link rel=&quot;stylesheet&quot;
+                                href=&quot;estilos.css&quot;&gt;<br>&lt;/head&gt;</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>Selecctores en CSS: </h4>
+                <table class="miTabla">
+                    <thead>
+                        <tr>
+                            <th>Selector</th>
+                            <th>Descripción</th>
+                            <th>Ejemplo (como texto)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Etiqueta</td>
+                            <td>Selecciona todas las etiquetas de un tipo</td>
+                            <td>p { color: blue; }</td>
+                        </tr>
+                        <tr>
+                            <td>Clase</td>
+                            <td>Selecciona elementos con una clase</td>
+                            <td>.miClase { font-size: 18px; }</td>
+                        </tr>
+                        <tr>
+                            <td>ID</td>
+                            <td>Selecciona un elemento con un ID único</td>
+                            <td>#miID { background-color: yellow; }</td>
+                        </tr>
+                        <tr>
+                            <td>Universal</td>
+                            <td>Selecciona todos los elementos</td>
+                            <td>* { margin: 0; }</td>
+                        </tr>
+                        <tr>
+                            <td>Descendiente (espacio)</td>
+                            <td>Selecciona elementos dentro de otros</td>
+                            <td>div p { color: red; }</td>
+                        </tr>
+                        <tr>
+                            <td>Hijo directo `&gt;`</td>
+                            <td>Selecciona solo los hijos directos</td>
+                            <td>ul &gt; li { list-style: none; }</td>
+                        </tr>
+                        <tr>
+                            <td>Hermano adyacente `+`</td>
+                            <td>Selecciona el siguiente hermano inmediato</td>
+                            <td>h1 + p { color: green; }</td>
+                        </tr>
+                        <tr>
+                            <td>Hermano general `~`</td>
+                            <td>Selecciona todos los hermanos posteriores</td>
+                            <td>h1 ~ p { font-style: italic; }</td>
+                        </tr>
+                        <tr>
+                            <td>Selector agrupado `,`</td>
+                            <td>Selecciona múltiples elementos</td>
+                            <td>h1, h2, p { margin: 10px; }</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>Principales propiedades: </h4>
+                <table class="miTabla">
+                    <thead>
+                        <tr>
+                            <th>Propiedad</th>
+                            <th>Descripción</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>color</td>
+                            <td>Color del texto</td>
+                            <td>color: red;</td>
+                        </tr>
+                        <tr>
+                            <td>background-color</td>
+                            <td>Color de fondo del elemento</td>
+                            <td>background-color: yellow;</td>
+                        </tr>
+                        <tr>
+                            <td>font-size</td>
+                            <td>Tamaño del texto</td>
+                            <td>font-size: 16px;</td>
+                        </tr>
+                        <tr>
+                            <td>font-family</td>
+                            <td>Tipo de fuente (letra)</td>
+                            <td>font-family: Arial, sans-serif;</td>
+                        </tr>
+                        <tr>
+                            <td>text-align</td>
+                            <td>Alineación del texto (left, center, right)</td>
+                            <td>text-align: center;</td>
+                        </tr>
+                        <tr>
+                            <td>margin</td>
+                            <td>Espacio exterior alrededor del elemento</td>
+                            <td>margin: 10px;</td>
+                        </tr>
+                        <tr>
+                            <td>padding</td>
+                            <td>Espacio interior entre el borde y el contenido</td>
+                            <td>padding: 5px;</td>
+                        </tr>
+                        <tr>
+                            <td>border</td>
+                            <td>Borde del elemento</td>
+                            <td>border: 1px solid black;</td>
+                        </tr>
+                        <tr>
+                            <td>width</td>
+                            <td>Ancho del elemento</td>
+                            <td>width: 300px;</td>
+                        </tr>
+                        <tr>
+                            <td>height</td>
+                            <td>Alto del elemento</td>
+                            <td>height: 200px;</td>
+                        </tr>
+                        <tr>
+                            <td>display</td>
+                            <td>Tipo de caja: block, inline, flex, etc.</td>
+                            <td>display: flex;</td>
+                        </tr>
+                        <tr>
+                            <td>position</td>
+                            <td>Ubicación del elemento (relative, absolute, fixed, etc.)</td>
+                            <td>position: relative;</td>
+                        </tr>
+                        <tr>
+                            <td>overflow</td>
+                            <td>Cómo se comporta el contenido desbordado</td>
+                            <td>overflow: auto;</td>
+                        </tr>
+                        <tr>
+                            <td>z-index</td>
+                            <td>Orden de apilamiento de elementos</td>
+                            <td>z-index: 10;</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
     <div class="contenedor-practicas">
         <h4>Prácticas de la semana</h4>
+        <div class="practicas">
+            <div class="container-practica">
+                <div class="carta-practica">
+                    <div class="circulo-practica"></div>
+                    <div class="numero-practica">
+                        <h5>Practica 01</h5>
+                    </div>
+                    <div class="contenido-practica">
+                        <p>En esta semana se revisó teoria de Emmet y su aplicación en Visual Estudio Code</p>
+                        <a href="https://github.com/Yaser-code/Semana02-EmmetTeoria-DesarrolloWeb" target="_blank">Ver aquí</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div id="piePagina"></div>
+    <script src="../js/miPiePagina.js"></script>
 </body>
+
 </html>

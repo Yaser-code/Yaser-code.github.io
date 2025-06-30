@@ -139,12 +139,12 @@ main{
             align-items: center;
             justify-content: center;
             gap: 10px;
-            transition: height 2s, width 2s;
+            transition: height 3s ease, width 3s ease;
         }
         .btnDescargarCv:hover{
             background-color: #029dfe;
-            height: 50px;
-            width: 170px;
+            height: 45px;
+            width: 165px;
         }
     /*Institucion*/
     .contenedorInstitucion {
