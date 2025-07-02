@@ -210,3 +210,61 @@ body{
     }
     .miTabla tr:nth-child(even){background-color: #f2f2f2;}
     .miTabla tr:hover {background-color: #ddd;}
+
+/*Estilo subtema titulo*/
+.titulo-subtema{
+    font-size: 25px;
+    text-align: center;
+    color: #254988;
+    text-decoration: underline;
+    text-shadow: 0 0 8px #cfc57e;
+}
+/*Estilo de ejemplo practico*/
+.ejemploPractico{
+    box-shadow: 0 0 8px #000;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+.tablaEjemploPractico {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tablaEjemploPractico th,
+.tablaEjemploPractico td {
+    border: 1px solid #ddd;
+    padding: 12px 16px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.tablaEjemploPractico th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.tablaEjemploPractico tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tablaEjemploPractico tr:hover {
+    background-color: #f1f1f1;
+}
+
+.tablaEjemploPractico td code {
+    font-family: Consolas, monospace;
+    background-color: #eef;
+    padding: 4px 6px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.tablaEjemploPractico td button {
+    margin-top: 4px;
+}
