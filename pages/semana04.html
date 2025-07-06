@@ -45,6 +45,198 @@
         </div>
     </div>
 
+    <div class="contenedor-aprendizaje">
+        <h3 class="queAprendi">¿Qué aprendí?</h3>
+        <div class="subtemas">
+            <div class="contenedor-subtema">
+                <h4 class="titulo-subtema">JavaScript</h4>
+                <p>lenguaje de programación interpretado, ligero y orientado a objetos, ampliamente utilizado para desarrollar sitios web dinámicos e interactivos.</p>
+                <h4><i class="fa-regular fa-thumbs-up"></i> Principales funciones:</h4>
+                <ul>
+                    <li>Validación de formularios.</li>
+                    <li>Animaciones.</li>
+                    <li>Interacción con el usuario (eventos, clics, teclado, etc.).</li>
+                </ul>
+                <h4><i class="fa-regular fa-clipboard"></i> Caracteristicas:</h4>
+                <ul>
+                    <li>Lenguaje interpretado (no necesita compilarse).</li>
+                    <li>Orientado a objetos y basado en prototipos.</li>
+                    <li>Compatible con todos los navegadores modernos.</li>
+                    <li>Muy utilizado junto a HTML y CSS para desarrollo web frontend.</li>
+                </ul>
+                <h4><i class="fa-solid fa-comment"></i> Imprimir mensaje con javascript</h4>
+                <table class="miTabla">
+                    <thead>
+                        <tr>
+                            <th>Tipo de mensaje</th>
+                            <th>Codigo javascript</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mensaje de alerta</td>
+                            <td>alert("¡Hola, mundo!");</td>
+                        </tr>
+                        <tr>
+                            <td>Mensaje de consola</td>
+                            <td>console.log("¡Hola, mundo!");</td>
+                        </tr>
+                        <tr>
+                            <td>Pedir un dato con javascript</td>
+                            <td>let numero = prompt("Ingresa un número:");<br>console.log("El número ingresado es:", numero);</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>Ejemplo de suma con JavaScript</h4>
+                <div>
+                    <p style="padding-left: 15px;">let a = 5;<br>let b = 3;<br>console.log("La suma es:", a + b);</p>
+                </div>
+                <h4>FORMAS DE DECLARAR VARIABLES</h4>
+                <table class="tablaEjemploPractico">
+                    <tr>
+                        <th>Forma de declarar</th>
+                        <th>Uso</th>
+                    </tr>
+                    <tr>
+                        <td>var nombre = "Ana";</td>
+                        <td>Puede cambiar y se redeclara</td>
+                    </tr>
+                    <tr>
+                        <td>let edad = 20; </td>
+                        <td>Puede cambiar, pero no se redeclara en el mismo bloque</td>
+                    </tr>
+                    <tr>
+                        <td>const PI = 3.14;</td>
+                        <td>No se puede cambiar</td>
+                    </tr>
+                </table>
+                <h4>ESTRUCTURAS CONDICIONALES</h4>
+                <table class="miTabla">
+                    <thead>
+                        <tr>
+                            <th>Condicional</th>
+                            <th>Estructura</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Condicional IF</td>
+                            <td>if(condicion){<br>//Codigo javascript si es verdadero<br>}</td>
+                        </tr>
+                        <tr>
+                            <td>Condicional IF-ELSE</td>
+                            <td>if(condicion){<br>//Codigo javascript si es verdadero<br>}else{<br>//Codigo javascript si es falso<br>}</td>
+                        </tr>
+                        <tr>
+                            <td>Condicional ELSE-IF</td>
+                            <td>if(condicion){<br>//Codigo javascript si es verdadero<br>}else if(condicion){<br>//Codigo javascript si es verdadero<br>}else{<br>//Codigo javascript si es falso<br>}</td>
+                        </tr>
+                        <tr>
+                            <td>Switch</td>
+                            <td>switch(variable){<br>case valor1:<br>//codigo para el valor 1<br>break;<br>case valor2:<br>//codigo para el valor 2<br>break;<br>default:<br>// código si no coincide ningún caso<br>}</td>
+                        </tr>
+                        <tr>
+                            <td>Operador ternario</td>
+                            <td>condición ? valor_si_verdadero : valor_si_falso;</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>ESTRUCTURAS DE BUCLES</h4>
+                <table class="miTabla">
+                    <thead>
+                        <tr>
+                            <th>Bucle</th>
+                            <th>Estructura</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>while</td>
+                            <td>while(condición){<br>// Código mientras la condición sea verdadera<br>}</td>
+                        </tr>
+                        <tr>
+                            <td>do-while</td>
+                            <td>do {<br>// Código que se ejecuta al menos una vez<br>} while(condición);<br></td>
+                        </tr>
+                        <tr>
+                            <td>for</td>
+                            <td>for(inicialización; condición; incremento){<br>// Código que se repite mientras la condición se cumpla<br>}</td>
+                        </tr>
+                        <tr>
+                            <td>for - of (Para recorrer arrays)</td>
+                            <td>for(let elemento of array){<br>// Código para cada elemento del array<br>}</td>
+                        </tr>
+                        <tr>
+                            <td>for - in (Para recorrer objetos)</td>
+                            <td>for(let clave in objeto){<br>// Código para cada propiedad del objeto<br>}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="contenedor-subtema">
+                <h4 class="titulo-subtema">Typescript</h4>
+                <p>es un superset de JavaScript desarrollado por Microsoft. Esto significa que extiende a JavaScript agregándole características avanzadas, siendo la más destacada el tipado estático.</p>
+                <h4><i class="fa-regular fa-clipboard"></i> Caracteristicas:</h4>
+                <ul>
+                    <li>Tipado estático: puedes declarar tipos (string, number, boolean, etc.).</li>
+                    <li>Orientado a objetos con clases, interfaces y herencia más avanzadas.</li>
+                    <li>Mejora la escalabilidad de proyectos grandes.</li>
+                    <li>Compatible con librerías y frameworks como Angular, React y Vue.</li>
+                </ul>
+                <h4>DECLARACIÓN DE VARIABLES CON TIPOS EN TYPESCRIPT</h4>
+                <table class="tablaEjemploPractico">
+                    <tr>
+                        <th>Forma de declarar</th>
+                        <th>Uso</th>
+                    </tr>
+                    <tr>
+                        <td>let nombre: string = "Ana";</td>
+                        <td>Declara una variable tipo texto (cadena de caracteres)</td>
+                    </tr>
+                    <tr>
+                        <td>let edad: number = 25;</td>
+                        <td>Declara una variable numérica</td>
+                    </tr>
+                    <tr>
+                        <td>let esEstudiante: boolean = true;</td>
+                        <td>Declara una variable booleana (verdadero o falso)</td>
+                    </tr>
+                    <tr>
+                        <td>let notas: number[] = [18, 17, 20];</td>
+                        <td>Declara un arreglo de números</td>
+                    </tr>
+                </table>
+                <h4>EJEMPLOS PRÁCTICOS EN TYPESCRIPT</h4>
+                <table class="tablaEjemploPractico">
+                    <tr>
+                        <th>Ejemplo</th>
+                        <th>Uso</th>
+                    </tr>
+                    <tr>
+                        <td>function saludar(nombre: string): void {<br>&nbsp;&nbsp;console.log("Hola " + nombre);<br>}</td>
+                        <td>Función que recibe un texto y no retorna valor (`void`)</td>
+                    </tr>
+                    <tr>
+                        <td>let suma = (a: number, b: number): number => {<br>&nbsp;&nbsp;return a + b;<br>};</td>
+                        <td>Función flecha que suma dos números y retorna el resultado</td>
+                    </tr>
+                    <tr>
+                        <td>interface Persona {<br>&nbsp;&nbsp;nombre: string;<br>&nbsp;&nbsp;edad: number;<br>}<br><br>let alumno: Persona = {<br>&nbsp;&nbsp;nombre: "Luis",<br>&nbsp;&nbsp;edad: 22<br>};</td>
+                        <td>Interface para definir la estructura de un objeto</td>
+                    </tr>
+                    <tr>
+                        <td>let datos: any = "Texto";<br>datos = 123;<br>datos = true;</td>
+                        <td>Uso del tipo `any`, que permite cambiar el tipo de dato (no recomendado para uso general)</td>
+                    </tr>
+                    <tr>
+                        <td>let identificador: unknown = "123";<br>// requiere verificación antes de usar</td>
+                        <td>Tipo `unknown`, más seguro que `any`, exige comprobación de tipo</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
     <div id="piePagina"></div>
 
     <!--Scripts de pie de encabezado y pie de pagina-->
