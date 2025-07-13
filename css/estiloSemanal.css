@@ -282,3 +282,13 @@ body{
 .comandoCrearProyecto:hover{
     background-color: #252424;
 }
+
+/*Contenedor ejemplo*/
+.contenedor-ejemplo{
+    box-shadow: 0 0 2px #ccc;
+    border-radius: 10px;
+    background-color: #1f1f1f;
+}
+.contenedor-ejemplo code{
+    color: #fff;
+}

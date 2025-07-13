@@ -49,8 +49,147 @@
         <h3 class="queAprendi">¿Qué aprendí?</h3>
         <div class="subtemas">
             <div class="contenedor-subtema">
-                <h4 class="titulo-subtema">Fundamentos de las tecnologías web</h4>
-                <p>Lorem, ipsum dolor.</p>
+                <h4 class="titulo-subtema">Eventos, condicionales y bucles en React</h4>
+                <p><i class="fa-regular fa-clipboard"></i> Caracteristicas:</p>
+                <ul>
+                    <li><strong>Eventos:</strong> Manejan acciones del usuario (ej. <code>onClick</code>).</li>
+                    <li><strong>Condicionales:</strong> Muestran u ocultan elementos según condiciones (<code>? :</code>, <code>&&</code>).</li>
+                    <li><strong>Bucles:</strong> Usan <code>.map()</code> para renderizar listas dinámicas.</li>
+                </ul>
+
+                <h4><i class="fa-regular fa-thumbs-up"></i> Eventos en React</h4>
+                <p>Los eventos en React se manejan usando camelCase y funciones manejadoras.</p>
+                <div class="contenedor-ejemplo">
+                    <pre><code>
+                    import React from 'react';
+
+                    function EventoEjemplo() {
+                        const mostrarAlerta = () => {
+                        alert('¡Hiciste clic!');
+                    };
+
+                    return (
+                        &lt;div&gt;
+                            &lt;h2&gt;Ejemplo de Evento&lt;/h2&gt;
+                            &lt;button onClick={mostrarAlerta}&gt;Haz clic aquí&lt;/button&gt;
+                        &lt;/div&gt;
+                    );
+                    }
+
+                    export default EventoEjemplo;
+                    </code></pre>
+                </div>
+                <h4><i class="fa-regular fa-thumbs-up"></i> Condicionales en React</h4>
+                <p>React no tiene estructuras if dentro del JSX, así que se usan expresiones como:</p>
+                <h5>Operador ternario</h5>
+                <div class="contenedor-ejemplo">
+                    <pre><code>
+                    {isLoggedIn ? &lt;p&gt;Bienvenida&lt;/p&gt; : &lt;p&gt;Inicia sesión&lt;/p&gt;}
+                    </code></pre>
+                </div>
+                <h5>Evaluación lógica</h5>
+                <div class="contenedor-ejemplo">
+                    <pre><code>
+                    {isAdmin &amp;&amp; &lt;button&gt;Panel de admin&lt;/button&gt;}
+                    </code></pre>
+                </div>
+                <h4><i class="fa-regular fa-thumbs-up"></i> Bucles en React</h4>
+                <p>Para iterar sobre arrays, se usa .map() dentro del JSX.</p>
+                <div class="contenedor-ejemplo">
+                    <pre><code>
+                    const productos = ['Polo', 'Zapatillas', 'Gorra'];
+
+                    function App() {
+                    return (
+                        &lt;ul&gt;
+                            {productos.map((item, index) =&gt; (
+                                &lt;li key={index}&gt;{item}&lt;/li&gt;
+                            ))}
+                        &lt;/ul&gt;
+                    );
+                    }
+                    </code></pre>
+                </div>
+                <h4><i class="fa-regular fa-thumbs-up"></i> Fragmentos</h4>
+                <p>Cuando devuelves varios elementos sin un div, usa <>...</>:</p>
+                <div class="contenedor-ejemplo">
+                    <pre><code>
+                    &lt;&gt;
+                        &lt;h1&gt;Título&lt;/h1&gt;
+                        &lt;p&gt;Texto&lt;/p&gt;
+                    &lt;/&gt;
+                    </code></pre>
+                </div>
+            </div>
+            <div class="contenedor-subtema">
+                <h4 class="titulo-subtema">Consumo de APIs</h4>
+                <p>Es el proceso de obtener datos de un servidor (por ejemplo, desde una API REST) y mostrarlos en tu componente React. Se usa comúnmente fetch() o librerías como axios.</p>
+                <h4>Tipos de APIs</h4>
+                <ul>
+                    <li>
+                        <h5>Según su acceso</h5>
+                        <ul>
+                            <li>API Pública: Cualquiera puede usarla sin restricciones (a veces con una clave).</li>
+                            <li>API Privada: Solo está disponible para uso interno de una empresa.</li>
+                            <li>API De socios: Compartida con terceros autorizados por contrato.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h5>Según su propósito</h5>
+                        <ul>
+                            <li>API Web: Permite que diferentes sistemas se comuniquen por Internet.</li>
+                            <li>API de Sistema Operativo: Accede a funciones del sistema como cámara, archivos, GPS.</li>
+                            <li>API De librerías o frameworks: Expone funciones listas para usar.</li>
+                            <li>API de Base de datos: Permite conectarse y hacer consultas SQL desde otros sistemas.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h5>Según su tipo tecnico</h5>
+                        <ul>
+                            <li>REST (Representational State Transfer): Usa HTTP (GET, POST, PUT, DELETE). Formato típico, JSON.</li>
+                            <li>SOAP (Simple Object Access Protocol): Basado en XML. Más seguro y estructurado, pero más pesado.</li>
+                            <li>GraphQL: Permite consultar solo los datos que necesitas. Más eficiente que REST en muchos casos.</li>
+                            <li>gRPC (Google Remote Procedure Call): Basado en Protobuf. Rápido, ideal para microservicios.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h4><i class="fa-regular fa-clipboard"></i> Funcionamiento:</h4>
+                <ul>
+                    <li>useEffect() se ejecuta cuando el componente se monta.</li>
+                    <li>fetch() obtiene los datos desde la API.</li>
+                    <li>Se guardan los datos en el useState().</li>
+                    <li>Se renderiza la lista en JSX.</li>
+                </ul>
+                <h4><i class="fa-regular fa-thumbs-up"></i> Ejemplo practico usando fetch() y useEffect</h4>
+                <div class="contenedor-ejemplo">
+                    <pre><code>
+                    import React, { useState, useEffect } from 'react';
+
+                    function App() {
+                        const [usuarios, setUsuarios] = useState([]);
+
+                        useEffect(() => {
+                            fetch('https://ejemploapi.com/api/usuarios')
+                            .then(respuesta =&gt; respuesta.json())
+                            .then(data =&gt; setUsuarios(data))
+                            .catch(error =&gt; console.error('Error al cargar los datos:', error));
+                        }, []);
+
+                        return (
+                            &lt;div&gt;
+                            &lt;h2&gt;Usuarios&lt;/h2&gt;
+                            &lt;ul&gt;
+                                {usuarios.map(usuario =&gt; (
+                                &lt;li key={usuario.id}&gt;{usuario.name}&lt;/li&gt;
+                                ))}
+                            &lt;/ul&gt;
+                            &lt;/div&gt;
+                        );
+                    }
+
+                    export default App;
+                    </code></pre>
+                </div>
             </div>
         </div>
     </div>
