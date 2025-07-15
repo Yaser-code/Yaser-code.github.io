@@ -12,6 +12,13 @@ const menuSemanal  = (
             <a href="../pages/semana05.html" class="menuItem"><span class="material-symbols-outlined">book_2</span> Semana 05</a>
             <a href="../pages/semana06.html" class="menuItem"><span class="material-symbols-outlined">book_2</span> Semana 06</a>
             <a href="../pages/semana07.html" class="menuItem"><span class="material-symbols-outlined">book_2</span> Semana 07</a>
+            <a href="../pages/semana09.html" class="menuItem"><span class="material-symbols-outlined">book_2</span> Semana 09</a>
+            <a href="../pages/semana10.html" class="menuItem"><span class="material-symbols-outlined">book_2</span> Semana 10</a>
+            <a href="../pages/semana11.html" class="menuItem"><span class="material-symbols-outlined">book_2</span> Semana 11</a>
+            <a href="../pages/semana12.html" class="menuItem"><span class="material-symbols-outlined">book_2</span> Semana 12</a>
+            <a href="../pages/semana13.html" class="menuItem"><span class="material-symbols-outlined">book_2</span> Semana 13</a>
+            <a href="../pages/semana14.html" class="menuItem"><span class="material-symbols-outlined">book_2</span> Semana 14</a>
+            <a href="../pages/semana15.html" class="menuItem"><span class="material-symbols-outlined">book_2</span> Semana 15</a>
         </nav>
     </div>`
 );
