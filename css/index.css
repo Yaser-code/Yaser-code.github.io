@@ -313,6 +313,8 @@ main{
     width: 300px;
     max-width: 300px;
     margin: 10px;
+    display: flex;
+    flex-direction: column;
 }
     .tarjeta h3{
         color: #000;
@@ -335,6 +337,7 @@ main{
         font-size: 18px;
         font-family: "Poetsen One", sans-serif;
         text-decoration: none;
+        margin-top: auto;
     }
     .tarjeta img{
         width: 100%;

@@ -49,8 +49,163 @@
         <h3 class="queAprendi">¿Qué aprendí?</h3>
         <div class="subtemas">
             <div class="contenedor-subtema">
-                <h4 class="titulo-subtema">Fundamentos de las tecnologías web</h4>
-                <p>Lorem, ipsum dolor.</p>
+                <h4 class="titulo-subtema">Hooks en React</h4>
+                <p>Los Hooks son funciones especiales introducidas en React que permiten usar el estado y otras características de React (como el ciclo de vida, el contexto, etc.) sin escribir clases.</p>
+                <h4>Objetivo</h4>
+                <p>Reutilizar lógica de componentes y trabajar con funcionalidades avanzadas en componentes funcionales.</p>
+                <h4>Hooks Básicos</h4>
+                <table class="miTabla">
+                    <thead>
+                        <tr>
+                            <th>Hooks</th>
+                            <th>Uso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>useState</td>
+                            <td>Para manejar estado local.</td>
+                        </tr>
+                        <tr>
+                            <td>useEffect</td>
+                            <td>Para efectos secundarios (fetch, subscripciones, etc.).</td>
+                        </tr>
+                        <tr>
+                            <td>useContext</td>
+                            <td>Para consumir un contexto sin usar el componente &lt;Context.Consumer&gt;</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>Hooks Avanzados</h4>
+                <table class="miTabla">
+                    <thead>
+                        <tr>
+                            <th>Hooks</th>
+                            <th>Uso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>useRef</td>
+                            <td>Para referencias mutables o acceder al DOM.</td>
+                        </tr>
+                        <tr>
+                            <td>useReducer</td>
+                            <td>Para manejar lógica de estado más compleja (similar a Redux).</td>
+                        </tr>
+                        <tr>
+                            <td>useCallback</td>
+                            <td>Para memorizar funciones y evitar renders innecesarios.</td>
+                        </tr>
+                        <tr>
+                            <td>useMemo</td>
+                            <td>Para memorizar valores calculados.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>Ejemplo practico de useState</h4>
+                <div class="contenedor-ejemplo">
+                    <pre><code>
+                    import React, { useState } from 'react';
+
+                    function Contador() {
+                        const [contador, setContador] = useState(0);
+
+                        const incrementar = () =&gt; {
+                            setContador(contador + 1);
+                        };
+
+                        return (
+                            &lt;div&gt;
+                            &lt;h2&gt;Contador: &#123;contador&#125;&lt;/h2&gt;
+                            &lt;button onClick=&#123;incrementar&#125;&gt;Incrementar&lt;/button&gt;
+                            &lt;/div&gt;
+                        );
+                    }
+                    </code></pre>
+                </div>
+            </div>
+            <div class="contenedor-subtema">
+                <h4 class="titulo-subtema">Hooks Personalizados en React</h4>
+                <p>Los Hooks personalizados son funciones de JavaScript que utilizan uno o más Hooks de React en su interior (useState, useEffect, etc.) para encapsular y reutilizar lógica de componentes.</p>
+                <h4>Regla principal</h4>
+                <p>Siempre deben comenzar con use en su nombre (por convención y para que React los reconozca como hooks).</p>
+                <h4>Por qué debemos usarlo:</h4>
+                <ul>
+                    <li>Reutilizar lógica entre componentes sin repetir código.</li>
+                    <li>Mejorar la organización y legibilidad del código.</li>
+                    <li>Separar responsabilidades (principio de responsabilidad única).</li>
+                </ul>
+                <h4>Ejemplos de Hooks personalizados</h4>
+                <table class="tablaEjemploPractico">
+                    <tr>
+                        <th>Hooks de Ejemplo</th>
+                        <th>Función de Hook</th>
+                    </tr>
+                    <tr>
+                        <td>useForm</td>
+                        <td>Manejo de formularios (inputs, validaciones)</td>
+                    </tr>
+                    <tr>
+                        <td>useFetch</td>
+                        <td>Lógica de peticiones a APIs</td>
+                    </tr>
+                    <tr>
+                        <td>useLocalStorage</td>
+                        <td>Leer y escribir valores en localStorage</td>
+                    </tr>
+                    <tr>
+                        <td>useDebounce</td>
+                        <td>Retardar el cambio de un valor (útil en búsquedas)</td>
+                    </tr>
+                    <tr>
+                        <td>useToggle</td>
+                        <td>Activar/desactivar booleanos (switch, modal, etc.)</td>
+                    </tr>
+                    <tr>
+                        <td>usePrevious</td>
+                        <td>Obtener el valor anterior de una variable</td>
+                    </tr>
+                </table>
+                <h4>Reglas para crear hooks personalizados</h4>
+                <ul>
+                    <li>Deben empezar con use (por ejemplo, useLogin, useTimer, etc.).</li>
+                    <li>Solo pueden usarse dentro de componentes o de otros hooks (nunca fuera del contexto de React).</li>
+                    <li>Pueden usar otros hooks dentro (useEffect, useState, etc.).</li>
+                </ul>
+                <h4>Ejemplo práctico</h4>
+                <p>Creando un hook useContador</p>
+                <div class="contenedor-ejemplo">
+                    <pre><code>
+                        import { useState } from 'react';
+                            function useContador(inicial = 0) {
+                            const [contador, setContador] = useState(inicial);
+
+                            const incrementar = () => setContador(contador + 1);
+                            const decrementar = () => setContador(contador - 1);
+                            const resetear = () => setContador(inicial);
+
+                            return { contador, incrementar, decrementar, resetear };
+                        }
+                    </code></pre>
+                </div>
+                <p>Usando el hook en un componente</p>
+                <div class="contenedor-ejemplo">
+                    <pre><code>
+                        function Contador() {
+                        const { contador, incrementar, decrementar, resetear } = useContador(5);
+
+                        return (
+                            &lt;div&gt;
+                            &lt;h1&gt;{contador}&lt;/h1&gt;
+                            &lt;button onClick={incrementar}&gt;+1&lt;/button&gt;
+                            &lt;button onClick={decrementar}&gt;-1&lt;/button&gt;
+                            &lt;button onClick={resetear}&gt;Reset&lt;/button&gt;
+                            &lt;/div&gt;
+                        );
+                        }
+                    </code></pre>
+                </div>
             </div>
         </div>
     </div>
@@ -67,8 +222,7 @@
                     </div>
                     <div class="contenido-practica">
                         <p>Se desarrollo una ruleta y una aplicación de sorteo</p>
-                        <a href="https://github.com/LeninBL/GRUPO-YASER-HOSPINA-BOZA" target="_blank">Ver
-                            aquí</a>
+                        <a href="https://github.com/LeninBL/GRUPO-YASER-HOSPINA-BOZA" target="_blank">Ver aquí</a>
                     </div>
                 </div>
             </div>
