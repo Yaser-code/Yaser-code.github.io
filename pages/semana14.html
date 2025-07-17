@@ -6,6 +6,7 @@
     <title>Semana 14</title>
     <link rel="stylesheet" href="../css/estiloCabeceraSemanas.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/estiloSemanal.css">
     <link rel="shortcut icon" href="../img/YaserLogo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -13,6 +14,124 @@
 </head>
 <body>
     <div id="cabeceraGeneral"></div>
+
+    <h3 class="semana">SEMANA 14</h3>
+    <div class="contedor-tom">
+        <div class="tema-semanal">
+            <h3>Tema semanal: Backend con Python y Flask</h3>
+            <ul>
+                <li>Fundamentos de Python: condicionales, bucles y funciones</li>
+                <li>Introducción a Flask: rutas y vista básica</li>
+            </ul>
+        </div>
+        <div class="contenedor-om">
+            <div class="contenedor-objetivos">
+                <h3>Objetivos</h3>
+                <ul>
+                    <li>Comprender las estructuras básicas del lenguaje Python.</li>
+                    <li>Aprender a crear una aplicación web sencilla con Flask.</li>
+                </ul>
+            </div>
+            <div class="materiales-semanales">
+                <h3>Materiales Utilizados</h3>
+                <ul>
+                    <li>Python 3.12</li>
+                    <li>Visual Studio Code</li>
+                    <li>Flask</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-aprendizaje">
+        <h3 class="queAprendi">¿Qué aprendí?</h3>
+        <div class="subtemas">
+            <div class="contenedor-subtema">
+                <h4 class="titulo-subtema">Fundamentos de Python: Condicionales, Bucles y Funciones</h4>
+                <p>Python es un lenguaje interpretado, de alto nivel, muy usado para aplicaciones web, análisis de datos, IA, y automatización.</p>
+
+                <h4><i class="fas fa-code-branch"></i> Condicionales</h4>
+                <div class="contenedor-ejemplo">
+                    <pre><code>
+                    edad = 18
+                    if edad >= 18:
+                        print("Eres mayor de edad")
+                    else:
+                        print("Eres menor de edad")
+                    </code></pre>
+                </div>
+
+                <h4><i class="fas fa-redo"></i> Bucles</h4>
+                <div class="contenedor-ejemplo">
+                    <pre><code>
+                    # Bucle for
+                    for i in range(5):
+                        print("Iteración", i)
+
+                    # Bucle while
+                    contador = 0
+                    while contador < 3:
+                        print("Contador:", contador)
+                        contador += 1
+                    </code></pre>
+                </div>
+
+                <h4><i class="fas fa-cogs"></i> Funciones</h4>
+                <div class="contenedor-ejemplo">
+                    <pre><code>
+                    def saludar(nombre):
+                        return f"Hola, {nombre}"
+
+                    print(saludar("Ana"))
+                    </code></pre>
+                </div>
+
+                <p>Estas estructuras son fundamentales para construir lógica en cualquier backend, ya que permiten ejecutar código de forma dinámica y estructurada.</p>
+            </div>
+
+            <div class="contenedor-subtema">
+                <h4 class="titulo-subtema">Introducción a Flask: Servidor Web Básico</h4>
+                <p>Flask es un microframework en Python que permite crear aplicaciones web de manera rápida y sencilla. Su estructura es ligera y flexible.</p>
+
+                <h4><i class="fas fa-cog"></i> ¿Cómo funciona Flask?</h4>
+                <ul>
+                    <li>Define rutas (URLs).</li>
+                    <li>Asocia funciones a esas rutas.</li>
+                    <li>Devuelve respuestas al navegador.</li>
+                </ul>
+
+                <h4><i class="fas fa-rocket"></i> Ejemplo básico de servidor Flask</h4>
+                <div class="contenedor-ejemplo">
+                    <pre><code>
+                    from flask import Flask
+
+                    app = Flask(__name__)
+
+                    @app.route('/')
+                    def inicio():
+                        return 'Hola mundo con Flask'
+
+                    @app.route('/saludo/&lt;nombre&gt;')
+                    def saludar(nombre):
+                        return f'Hola, {nombre}! Bienvenido a Flask.'
+
+                    if __name__ == '__main__':
+                        app.run(debug=True)
+                    </code></pre>
+                </div>
+
+                <p>Este pequeño servidor tiene dos rutas: una para el inicio y otra para saludar usando un parámetro dinámico.</p>
+
+                <h4><i class="fas fa-check-circle"></i> ¿Por qué usar Flask?</h4>
+                <ol>
+                    <li>Es fácil de aprender para quienes ya dominan Python.</li>
+                    <li>Ideal para proyectos pequeños y medianos.</li>
+                    <li>Permite extender fácilmente con librerías como Jinja2, SQLAlchemy, entre otras.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
     <div id="piePagina"></div>
 
     <!--Scripts de encabezado y pie de pagina-->

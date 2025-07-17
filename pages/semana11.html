@@ -6,6 +6,7 @@
     <title>Semana 11</title>
     <link rel="stylesheet" href="../css/estiloCabeceraSemanas.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/estiloSemanal.css">
     <link rel="shortcut icon" href="../img/YaserLogo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -13,6 +14,118 @@
 </head>
 <body>
     <div id="cabeceraGeneral"></div>
+
+    <h3 class="semana">SEMANA 11</h3>
+    <div class="contedor-tom">
+        <div class="tema-semanal">
+            <h3>Tema semanal: Backend con Java Spring</h3>
+            <ul>
+                <li>Inversión de Control (IoC) y Dependencias</li>
+                <li>Creación de APIs REST con Spring MVC</li>
+            </ul>
+        </div>
+        <div class="contenedor-om">
+            <div class="contenedor-objetivos">
+                <h3>Objetivos</h3>
+                <ul>
+                    <li>Comprender cómo Spring gestiona dependencias y objetos con IoC.</li>
+                    <li>Aplicar la creación de endpoints REST usando Spring MVC.</li>
+                </ul>
+            </div>
+            <div class="materiales-semanales">
+                <h3>Materiales Utilizados</h3>
+                <ul>
+                    <li>IntelliJ IDEA, Visual Studio Code</li>
+                    <li>Laptop</li>
+                    <li>Internet</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-aprendizaje">
+        <h3 class="queAprendi">¿Qué aprendí?</h3>
+        <div class="subtemas">
+            <div class="contenedor-subtema">
+                <h4 class="titulo-subtema">Inversión de Control (IoC) y Dependencias</h4>
+                <p>En Spring, la Inversión de Control (IoC) permite que el framework gestione la creación y conexión de objetos, favoreciendo un código limpio, desacoplado y fácil de mantener.</p>
+                <h4><span class="material-symbols-outlined">cable</span> ¿Qué es la inyección de dependencias (DI)?</h4>
+                <ul>
+                    <li>Es la forma en que Spring suministra automáticamente los objetos que una clase necesita.</li>
+                    <li>Se puede hacer por constructor o por atributos.</li>
+                    <li>Evita crear instancias manualmente con <code>new</code>.</li>
+                </ul>
+                <h4><span class="material-symbols-outlined">view_comfy_alt</span> Anotaciones comunes</h4>
+                <ul>
+                    <li><code>@Component</code>: Marca una clase para que Spring la gestione como un bean.</li>
+                    <li><code>@Autowired</code>: Le indica a Spring que debe inyectar una dependencia automáticamente.</li>
+                </ul>
+                <h4><span class="material-symbols-outlined">select_check_box</span> Ejemplo de IoC + DI</h4>
+                <div class="contenedor-ejemplo">
+                    <pre><code>
+                        @Component
+                        public class Motor {
+                            public void encender() {
+                                System.out.println("Motor encendido");
+                            }
+                        }
+
+                        @Component
+                        public class Auto {
+                            private final Motor motor;
+
+                            @Autowired
+                            public Auto(Motor motor) {
+                                this.motor = motor;
+                            }
+
+                            public void arrancar() {
+                                motor.encender();
+                            }
+                        }
+                    </code></pre>
+                </div>
+            </div>
+
+            <div class="contenedor-subtema">
+                <h4 class="titulo-subtema">Creación de APIs REST con Spring MVC</h4>
+                <p>Spring MVC permite construir APIs REST de forma sencilla, usando anotaciones para mapear peticiones HTTP a métodos en clases controladoras.</p>
+                <h4><span class="material-symbols-outlined">api</span> ¿Qué hace un controlador REST?</h4>
+                <ul>
+                    <li>Escucha solicitudes HTTP como GET, POST, PUT, DELETE.</li>
+                    <li>Procesa datos y devuelve respuestas en formato JSON.</li>
+                    <li>Utiliza anotaciones como <code>@RestController</code> y <code>@RequestMapping</code>.</li>
+                </ul>
+                <h4><span class="material-symbols-outlined">select_check_box</span> Ejemplo práctico de controlador REST</h4>
+                <div class="contenedor-ejemplo">
+                    <pre><code>
+                        @RestController
+                        @RequestMapping("/usuarios")
+                        public class UsuarioController {
+
+                            @GetMapping("/{id}")
+                            public String obtenerUsuario(@PathVariable int id) {
+                                return "Usuario con ID: " + id;
+                            }
+
+                            @PostMapping
+                            public String crearUsuario(@RequestBody Usuario usuario) {
+                                return "Usuario creado: " + usuario.getNombre();
+                            }
+                        }
+                    </code></pre>
+                </div>
+                <h4><span class="material-symbols-outlined">check_circle</span> Ventajas de usar Spring MVC</h4>
+                <ol>
+                    <li>Facilita la creación de APIs RESTful de forma estructurada.</li>
+                    <li>Usa anotaciones intuitivas y legibles.</li>
+                    <li>Permite integrar fácilmente con bases de datos o servicios.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+
     <div id="piePagina"></div>
 
     <!--Scripts de encabezado y pie de pagina-->

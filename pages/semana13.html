@@ -6,6 +6,7 @@
     <title>Semana 13</title>
     <link rel="stylesheet" href="../css/estiloCabeceraSemanas.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/estiloSemanal.css">
     <link rel="shortcut icon" href="../img/YaserLogo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -13,6 +14,104 @@
 </head>
 <body>
     <div id="cabeceraGeneral"></div>
+
+    <h3 class="semana">SEMANA 13</h3>
+    <div class="contedor-tom">
+        <div class="tema-semanal">
+            <h3>Tema semanal: Backend con Laravel</h3>
+            <ul>
+                <li>Creación de rutas, controladores y vistas</li>
+                <li>Conexión a base de datos y uso de Eloquent ORM</li>
+            </ul>
+        </div>
+        <div class="contenedor-om">
+            <div class="contenedor-objetivos">
+                <h3>Objetivos</h3>
+                <ul>
+                    <li>Entender la estructura básica de un proyecto Laravel.</li>
+                    <li>Aprender a interactuar con bases de datos usando Eloquent ORM.</li>
+                </ul>
+            </div>
+            <div class="materiales-semanales">
+                <h3>Materiales Utilizados</h3>
+                <ul>
+                    <li>Laravel 10</li>
+                    <li>Visual Studio Code</li>
+                    <li>XAMPP o Laravel Sail</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-aprendizaje">
+        <h3 class="queAprendi">¿Qué aprendí?</h3>
+        <div class="subtemas">
+            <div class="contenedor-subtema">
+                <h4 class="titulo-subtema">Rutas, Controladores y Vistas en Laravel</h4>
+                <p>Laravel utiliza el patrón MVC (Modelo - Vista - Controlador), lo que permite separar la lógica de negocio, la interfaz y la gestión de datos.</p>
+                <h4><span class="material-symbols-outlined">alt_route</span> ¿Cómo funciona el flujo básico?</h4>
+                <ul>
+                    <li>El usuario accede a una URL (ruta).</li>
+                    <li>Esa ruta llama a un método de un controlador.</li>
+                    <li>El controlador devuelve una vista o una respuesta.</li>
+                </ul>
+                <h4><span class="material-symbols-outlined">select_check_box</span> Ejemplo práctico</h4>
+                <div class="contenedor-ejemplo">
+                    <pre><code>
+                    // web.php (definición de ruta)
+                    Route::get('/saludo', [SaludoController::class, 'mostrar']);
+
+                    // SaludoController.php
+                    class SaludoController extends Controller {
+                        public function mostrar() {
+                            return view('saludo', ['nombre' => 'Ana']);
+                        }
+                    }
+
+                    // saludo.blade.php
+                    &lt;h1&gt;Hola, {{ $nombre }}!&lt;/h1&gt;
+                    </code></pre>
+                </div>
+            </div>
+
+            <div class="contenedor-subtema">
+                <h4 class="titulo-subtema">Conexión a Base de Datos y Eloquent ORM</h4>
+                <p>Laravel incluye Eloquent, un ORM (Object-Relational Mapping) que permite trabajar con la base de datos usando clases en lugar de escribir SQL directamente.</p>
+                <h4><span class="material-symbols-outlined">database</span> ¿Qué se necesita?</h4>
+                <ul>
+                    <li>Definir la conexión en el archivo <code>.env</code>.</li>
+                    <li>Crear un modelo que represente la tabla.</li>
+                    <li>Usar métodos como <code>all()</code>, <code>find()</code>, <code>create()</code>, etc.</li>
+                </ul>
+                <h4><span class="material-symbols-outlined">select_check_box</span> Ejemplo de uso de Eloquent</h4>
+                <div class="contenedor-ejemplo">
+                    <pre><code>
+                    // Modelo Usuario.php
+                    class Usuario extends Model {
+                        protected $fillable = ['nombre', 'correo'];
+                    }
+
+                    // Insertar nuevo usuario
+                    Usuario::create([
+                        'nombre' => 'Pedro',
+                        'correo' => 'pedro@example.com'
+                    ]);
+
+                    // Obtener todos los usuarios
+                    $usuarios = Usuario::all();
+                    </code></pre>
+                </div>
+                <h4><span class="material-symbols-outlined">check_circle</span> Ventajas de Eloquent</h4>
+                <ol>
+                    <li>Facilita las operaciones CRUD sin escribir SQL.</li>
+                    <li>Se integra fácilmente con controladores y rutas.</li>
+                    <li>Permite relaciones entre modelos (uno a muchos, muchos a muchos, etc.).</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+
     <div id="piePagina"></div>
 
     <!--Scripts de encabezado y pie de pagina-->

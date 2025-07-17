@@ -6,6 +6,7 @@
     <title>Semana 12</title>
     <link rel="stylesheet" href="../css/estiloCabeceraSemanas.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/estiloSemanal.css">
     <link rel="shortcut icon" href="../img/YaserLogo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -13,6 +14,100 @@
 </head>
 <body>
     <div id="cabeceraGeneral"></div>
+
+    <h3 class="semana">SEMANA 12</h3>
+    <div class="contedor-tom">
+        <div class="tema-semanal">
+            <h3>Tema semanal: Backend con Java Spring Boot</h3>
+            <ul>
+                <li>Creación de proyectos con Spring Boot</li>
+                <li>Persistencia de datos con Spring Data JPA</li>
+            </ul>
+        </div>
+        <div class="contenedor-om">
+            <div class="contenedor-objetivos">
+                <h3>Objetivos</h3>
+                <ul>
+                    <li>Comprender cómo iniciar un proyecto con Spring Boot.</li>
+                    <li>Aplicar el uso de Spring Data JPA para acceder a bases de datos.</li>
+                </ul>
+            </div>
+            <div class="materiales-semanales">
+                <h3>Materiales Utilizados</h3>
+                <ul>
+                    <li>Spring Initializr</li>
+                    <li>IntelliJ IDEA</li>
+                    <li>Base de datos MySQL</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-aprendizaje">
+        <h3 class="queAprendi">¿Qué aprendí?</h3>
+        <div class="subtemas">
+            <div class="contenedor-subtema">
+                <h4 class="titulo-subtema">Creación de Proyectos con Spring Boot</h4>
+                <p>Spring Boot simplifica la creación de proyectos al ofrecer una estructura preconfigurada con dependencias listas para usar. Se utiliza principalmente con Spring Initializr.</p>
+                <h4><span class="material-symbols-outlined">rocket_launch</span> ¿Qué hace Spring Boot?</h4>
+                <ul>
+                    <li>Automatiza configuraciones comunes (como conexión a la base de datos).</li>
+                    <li>Incluye un servidor embebido (como Tomcat).</li>
+                    <li>Permite ejecutar aplicaciones fácilmente con <code>main()</code>.</li>
+                </ul>
+                <h4><span class="material-symbols-outlined">approval_delegation</span> Acceder a Spring Initializr</h4>
+                <a href="https://start.spring.io/" target="_blank" style="color: #00f;"><span class="material-symbols-outlined">touch_long</span> Ir a Spring Initializr</a>
+                <h4><span class="material-symbols-outlined">select_check_box</span> Ejemplo de clase principal con Spring Boot</h4>
+                <div class="contenedor-ejemplo">
+                    <pre><code>
+                        @SpringBootApplication
+                        public class MiAplicacion {
+                            public static void main(String[] args) {
+                                SpringApplication.run(MiAplicacion.class, args);
+                            }
+                        }
+                    </code></pre>
+                </div>
+            </div>
+
+            <div class="contenedor-subtema">
+                <h4 class="titulo-subtema">Persistencia de Datos con Spring Data JPA</h4>
+                <p>Spring Data JPA permite trabajar con bases de datos utilizando objetos y clases Java, sin escribir SQL directamente. Usa interfaces que Spring implementa automáticamente.</p>
+                <h4><span class="material-symbols-outlined">database</span> ¿Cómo se estructura?</h4>
+                <ul>
+                    <li>Una clase entidad anotada con <code>@Entity</code>.</li>
+                    <li>Un repositorio que extiende <code>JpaRepository</code>.</li>
+                    <li>Spring se encarga del CRUD completo.</li>
+                </ul>
+                <h4><span class="material-symbols-outlined">select_check_box</span> Ejemplo de Entidad y Repositorio</h4>
+                <div class="contenedor-ejemplo">
+                    <pre><code>
+                        @Entity
+                        public class Usuario {
+                            @Id
+                            @GeneratedValue(strategy = GenerationType.IDENTITY)
+                            private Long id;
+                            private String nombre;
+                            private String correo;
+                            // getters y setters
+                        }
+                    </code></pre>
+                    <pre><code>
+                        public interface UsuarioRepository extends JpaRepository&lt;Usuario, Long&gt; {
+                            // Métodos como findAll(), findById(), save(), delete() ya están listos
+                        }
+                    </code></pre>
+                </div>
+                <h4><span class="material-symbols-outlined">check_circle</span> Ventajas de Spring Data JPA</h4>
+                <ol>
+                    <li>Reduce el código repetitivo de SQL.</li>
+                    <li>Fácil integración con controladores REST.</li>
+                    <li>Permite consultas personalizadas con métodos simples.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
     <div id="piePagina"></div>
 
     <!--Scripts de encabezado y pie de pagina-->

@@ -6,6 +6,7 @@
     <title>Semana 09</title>
     <link rel="stylesheet" href="../css/estiloCabeceraSemanas.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/estiloSemanal.css">
     <link rel="shortcut icon" href="../img/YaserLogo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -13,6 +14,131 @@
 </head>
 <body>
     <div id="cabeceraGeneral"></div>
+
+    <h3 class="semana">SEMANA 09</h3>
+    <div class="contedor-tom">
+        <div class="tema-semanal">
+            <h3>Tema semanal: Tecnología web Backend.</h3>
+            <ul>
+                <li>Arquitecturas web</li>
+                <li>Servidores web</li>
+            </ul>
+        </div>
+        <div class="contenedor-om">
+            <div class="contenedor-objetivos">
+                <h3>Objetivos</h3>
+                <ul>
+                    <li>Explicar las arquitecturas web.</li>
+                    <li>Explicar sobre Servidores web, servicio Hosting y Cloud Hosting.</li>
+                </ul>
+            </div>
+            <div class="materiales-semanales">
+                <h3>Materiales Utilizados</h3>
+                <ul>
+                    <li>Visual Studio Code, IntelliJ IDEA</li>
+                    <li>Internet</li>
+                    <li>Laptop</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-aprendizaje">
+        <h3 class="queAprendi">¿Qué aprendí?</h3>
+        <div class="subtemas">
+            <div class="contenedor-subtema">
+                <h4 class="titulo-subtema">Aquitecturas Web</h4>
+                <p>Las arquitecturas web son estructuras que definen cómo se organizan y se comunican los diferentes componentes de una aplicación web.</p>
+                <h4><span class="material-symbols-outlined">star_half </span> Tipos de arquitectura</h4>
+                <ul>
+                    <li>
+                        <h5>Arquitectura C/S Clásica - Múltiples Páginas </h5>
+                        <p>Es la típica estructura Cliente/Servidor, Cada vez que el usuario interactúa (ej. hace clic), se recarga toda la página desde el servidor, Se usa en sitios tradicionales como portales de noticias o universidades.</p>
+                    </li>
+                    <li>
+                        <h5>Arquitectura C/S Multicapa - Múltiples Páginas </h5>
+                        <p>Similar a la anterior, pero organizada en capas (presentación, lógica de negocio y datos), Mejora el mantenimiento y escalabilidad del sistema, Cada acción aún recarga una nueva página desde el servidor.</p>
+                    </li>
+                    <li>
+                        <h5>Arquitectura C/S Multicapa - Página Única SPA  </h5>
+                        <p>Toda la aplicación carga en una sola página web, Usa JavaScript para actualizar contenido sin recargar la página, Muy rápida y fluida para el usuario (como Gmail o Facebook).</p>
+                    </li>
+                    <li>
+                        <h5>Arquitectura C/S Multicapa - SPA / MPA- Hibridas </h5>
+                        <p>Combina lo mejor de SPA y MPA, Algunas partes son páginas únicas (SPA) y otras se recargan por completo (MPA), Ideal para apps grandes donde no todo necesita ser SPA.</p>
+                    </li>
+                    <li>
+                        <h5>Arquitectura Hexagonal </h5>
+                        <p>También llamada “puertos y adaptadores”, Divide la app en un núcleo central (lógica) y adapta todo lo externo (UI, base de datos, APIs), Favorece la independencia de tecnologías y pruebas más fáciles.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="contenedor-subtema">
+                <h4 class="titulo-subtema">Servidores web, Servicio Hosting y Cloud Hosting</h4>
+                <p>A continuación se define cada uno de los conceptos:</p>
+                <ul>
+                    <li>Servidor web: Es un software o hardware que entrega páginas web al navegador del usuario cuando este las solicita.</li>
+                    <li>Servicio de hosting: Es el alquiler de espacio en un servidor para almacenar y publicar sitios web.</li>
+                    <li>Cloud hosting: Es un tipo de hosting que usa múltiples servidores en la nube, ofreciendo mayor escalabilidad y disponibilidad.</li>
+                </ul>
+                <h4><span class="material-symbols-outlined">terminal</span> Softwares Utilizados por servidores web</h4>
+                <ul>
+                    <li>
+                        <strong>Apache HTTP Server:</strong> Servidor web de código abierto, muy usado por su flexibilidad y compatibilidad con múltiples lenguajes como PHP, Perl y Python.
+                    </li>
+                    <li>
+                        <strong>Nginx:</strong> Servidor web y proxy inverso ligero, ideal para manejar alto tráfico con excelente rendimiento.
+                    </li>
+                    <li>
+                        <strong>Microsoft IIS:</strong> Servidor web desarrollado por Microsoft, integrado con Windows Server, compatible con aplicaciones .NET y ASP.
+                    </li>
+                    <li>
+                        <strong>LiteSpeed:</strong> Servidor web comercial conocido por su velocidad, bajo consumo de recursos y compatibilidad con Apache.
+                    </li>
+                    <li>
+                        <strong>Apache Tomcat:</strong> Servidor de aplicaciones web especializado en ejecutar aplicaciones Java con soporte para Servlets y JSP.
+                    </li>
+                </ul>
+                <h4><span class="material-symbols-outlined">star_half </span> Tipos de Hosting</h4>
+                <ul>
+                    <li>
+                        <strong>Hosting compartido:</strong> Varios sitios web comparten los recursos de un mismo servidor. Es económico, pero puede ser lento si otros sitios consumen muchos recursos.
+                    </li>
+                    <li>
+                        <strong>Hosting de servidor privado virtual (VPS):</strong> Un servidor físico dividido en varios entornos virtuales independientes. Ofrece más control y recursos que el hosting compartido.
+                    </li>
+                    <li>
+                        <strong>Hosting dedicado:</strong> Todo el servidor físico está reservado para un solo usuario o empresa. Ofrece máximo rendimiento y control, ideal para sitios con mucho tráfico.
+                    </li>
+                    <li>
+                        <strong>Hosting administrado:</strong> El proveedor se encarga de la configuración, mantenimiento y seguridad del servidor. Recomendado para quienes no tienen conocimientos técnicos avanzados.
+                    </li>
+                    <li>
+                        <strong>Hosting en la nube:</strong> Usa una red de servidores conectados para garantizar disponibilidad y escalabilidad. Es flexible, seguro y se adapta a la demanda del sitio.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-practicas">
+        <h4>Prácticas de la semana</h4>
+        <div class="practicas">
+            <div class="container-practica">
+                <div class="carta-practica">
+                    <div class="circulo-practica"></div>
+                    <div class="numero-practica">
+                        <h5>Practica 01</h5>
+                    </div>
+                    <div class="contenido-practica">
+                        <p>Se desarrollo una aplicación web usando Tokens. <br>Usuario: administrador, contraseña: admin123</p>
+                        <a href="https://frontend-login-tokens.vercel.app/login" target="_blank">Ver aquí</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="piePagina"></div>
 
     <!--Scripts de encabezado y pie de pagina-->

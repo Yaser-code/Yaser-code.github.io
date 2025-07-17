@@ -6,6 +6,7 @@
     <title>Semana 10</title>
     <link rel="stylesheet" href="../css/estiloCabeceraSemanas.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/estiloSemanal.css">
     <link rel="shortcut icon" href="../img/YaserLogo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -13,6 +14,125 @@
 </head>
 <body>
     <div id="cabeceraGeneral"></div>
+
+    <h3 class="semana">SEMANA 10</h3>
+    <div class="contedor-tom">
+        <div class="tema-semanal">
+            <h3>Tema semanal: Backend con java.</h3>
+            <ul>
+                <li>Servidores con Java</li>
+                <li>Conexión a Bases de Datos</li>
+            </ul>
+        </div>
+        <div class="contenedor-om">
+            <div class="contenedor-objetivos">
+                <h3>Objetivos</h3>
+                <ul>
+                    <li>Explicar sobre Servlets</li>
+                    <li>Explicar sobre conexion a base de datos.</li>
+                </ul>
+            </div>
+            <div class="materiales-semanales">
+                <h3>Materiales Utilizados</h3>
+                <ul>
+                    <li>Visual Studio Code, IntelliJ IDEA</li>
+                    <li>Internet</li>
+                    <li>Laptop</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-aprendizaje">
+        <h3 class="queAprendi">¿Qué aprendí?</h3>
+        <div class="subtemas">
+            <div class="contenedor-subtema">
+                <h4 class="titulo-subtema">Servlets</h4>
+                <p>Un Servlet es una clase Java que se ejecuta en un servidor web y responde a solicitudes HTTP (como cuando un usuario envía un formulario o accede a una URL).</p>
+                <h4><span class="material-symbols-outlined">star_rate_half</span> ¿Qué puedes hacer con Servlets?</h4>
+                <ul>
+                    <li>Procesar formularios.</li>
+                    <li>Generar HTML dinámico.</li>
+                    <li>Conectarte a una base de datos.</li>
+                    <li>Controlar el flujo de navegación.</li>
+                </ul>
+                <h4><span class="material-symbols-outlined">view_comfy_alt</span> Componentes clave</h4>
+                <ul>
+                    <li>HttpServlet: Clase base para los servlets HTTP.</li>
+                    <li>doGet() y doPost(): Métodos para manejar peticiones GET y POST.</li>
+                    <li>HttpServletRequest y HttpServletResponse: Objetos para leer datos enviados y generar respuestas.</li>
+                </ul>
+                <h4><span class="material-symbols-outlined">select_check_box</span> Ejemplo practico de Servlet básico</h4>
+                <div class="contenedor-ejemplo">
+                    <pre><code>
+                        @WebServlet("/saludo")
+                        public class SaludoServlet extends HttpServlet {
+                            protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+                                response.setContentType("text/html");
+                                PrintWriter out = response.getWriter();
+                                out.println("&lt;h1&gt;Hola desde un Servlet en Java&gt;/h1&gt;");
+                            }
+                        }
+                    </code></pre>
+                </div>
+            </div>
+            <div class="contenedor-subtema">
+                <h4 class="titulo-subtema">Conexión a Bases de Datos con JDBC</h4>
+                <p>JDBC (Java Database Connectivity) es una API que permite a las aplicaciones Java conectarse y trabajar con bases de datos relacionales como MySQL, PostgreSQL, Oracle, etc.</p>
+                <h4><span class="material-symbols-outlined">star_rate_half</span> Pasos para usar JDBC</h4>
+                <ul>
+                    <li>Cargar el driver JDBC.</li>
+                    <li>Establecer conexión con la base de datos.</li>
+                    <li>Crear y ejecutar consultas SQL.</li>
+                    <li>Procesar los resultados.</li>
+                    <li>Cerrar la conexión.</li>
+                </ul>
+                <h4><span class="material-symbols-outlined">select_check_box</span> Ejemplo práctico: Insertar un usuario en una tabla</h4>
+                <div class="contenedor-ejemplo">
+                    <pre><code>
+                        import java.sql.*;
+
+                        public class ConexionBD {
+                            public static void main(String[] args) {
+                                String url = "jdbc:mysql://localhost:3306/mi_base";
+                                String user = "root";
+                                String password = "123456";
+
+                                try {
+                                    // 1. Conectar a la base de datos
+                                    Connection conexion = DriverManager.getConnection(url, user, password);
+
+                                    // 2. Crear la consulta
+                                    String sql = "INSERT INTO usuarios (nombre, correo) VALUES (?, ?)";
+                                    PreparedStatement stmt = conexion.prepareStatement(sql);
+                                    stmt.setString(1, "Ana");
+                                    stmt.setString(2, "ana@example.com");
+
+                                    // 3. Ejecutar
+                                    int filas = stmt.executeUpdate();
+                                    System.out.println("Filas insertadas: " + filas);
+
+                                    // 4. Cerrar conexión
+                                    stmt.close();
+                                    conexion.close();
+
+                                } catch (SQLException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        }
+                    </code></pre>
+                </div>
+                <h4><span class="material-symbols-outlined">select_check_box</span> Ventajas de JDBC</h4>
+                <ol>
+                    <li>Es parte del estándar de Java.</li>
+                    <li>Compatible con múltiples bases de datos.</li>
+                    <li>Control total del flujo de datos.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
     <div id="piePagina"></div>
 
     <!--Scripts de encabezado y pie de pagina-->
