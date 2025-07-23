@@ -26,6 +26,7 @@ body{
 }
     .tema-semanal{
         display: flex;
+        text-align: center;
         flex-direction: column;
         box-shadow: 2px 2px 8px #ccc, 0 0 10px #000;
         border-radius: 30px;
@@ -36,8 +37,6 @@ body{
         width: 400px;
     }
     .tema-semanal:hover{
-        height: 305px;
-        width: 405px;
         transform: rotate(360deg);
         transition: 2s;
     }
@@ -48,13 +47,11 @@ body{
             box-shadow: 0 0 10px #212121;
             padding: 10px;
             margin: 10px;
-            height: 150px;
             width: 400px;
             border-radius: 10px;
             transition: height 3s, width 3s, transform 3s;
         }
         .contenedor-objetivos:hover, .materiales-semanales:hover{
-            height: 155px;
             width: 405px;
             transform: rotate(2deg);
         }
